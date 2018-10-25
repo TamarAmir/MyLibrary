@@ -1,10 +1,11 @@
 .navbar-custom {
-    background-color:rgba(255,255,255,.6);
+    background-color:rgba(222, 228, 228, 0.6);
 }
 
 .header-container {
-    height: 350px;
+    height: 310px;
     width: 100%;
+    margin-bottom: 15px;
 }
 
 .header-image {
@@ -20,7 +21,7 @@
     opacity: .6;
 }
 
-.header {
+.login-header {
     text-align: center;
     color: firebrick;
     font-size: 400%;
@@ -39,12 +40,194 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.general-content {
-    font-family: 'Courier New', Courier, monospace;
+.login-content {
+    font-family: 'Courier New', Courier, monospace; 
+    background-color: rgb(211, 191, 170);
+    /* padding-bottom: 50px; */
 }
 
 p.about {
     font-weight: bold;
+}
+
+.login-form-container {
+    color: white;
+    padding: 12px 6px 2px 6px;
+    border-top: 5px solid #854905;
+    border-right: 5px solid #854905;
+    border-bottom: 5px solid #854905;
+    border-left: 5px solid #854905;
+    border-radius: 10px;
+    margin: auto;
+    width: 60%;
+    background-image: linear-gradient(bottom, rgb(187, 156, 20) 0%, rgb(228, 191, 26) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(187, 156, 20) 0%, rgb(228, 191, 26) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(187, 156, 20) 0%, rgb(228, 191, 26) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(187, 156, 20) 0%, rgb(228, 191, 26) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(187, 156, 20) 0%, rgb(228, 191, 26) 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(187, 156, 20)), color-stop(1, rgb(228, 191, 26)));
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-shadow: 0px  -1px 0px rgba(0,0,0,.5);
+    -webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,.3), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    -moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,.3), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    box-shadow: inset 0px 1px 0px rgba(255,255,255,.3), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+}
+
+.login-form {
+    display:inline-block;
+    margin-left: 20px;
+}
+
+input, textarea {
+    font-weight: bold;
+}
+.login-form .form-control::-webkit-input-placeholder { color: rgba(173, 97, 20, 0.5) !important; font-weight: bold;}
+.login-form .form-control:-moz-placeholder { color: rgba(173, 97, 20, 0.5) !important; font-weight: bold;}
+.login-form .form-control::-moz-placeholder { color: rgba(173, 97, 20, 0.5) !important; font-weight: bold;}
+.login-form .form-control:-ms-input-placeholder { color: rgba(173, 97, 20, 0.5) !important; font-weight: bold;}
+.login-form .form-control::-ms-input-placeholder { color: rgba(173, 97, 20, 0.5) !important; font-weight: bold;}
+
+.btn-custom {
+    background-image: linear-gradient(bottom, rgb(153, 91, 13) 0%, rgb(206, 129, 14) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(153, 91, 13) 0%, rgb(206, 129, 14) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(153, 91, 13) 0%, rgb(206, 129, 14) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(153, 91, 13) 0%, rgb(206, 129, 14) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(153, 91, 13) 0%, rgb(206, 129, 14) 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(153, 91, 13)), color-stop(1, rgb(206, 129, 14)));
+    text-shadow: 0px  -1px 0px rgba(0,0,0,.5);
+    border: 3px rgb(153, 91, 13) solid;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-shadow: 0px  -1px 0px rgba(0,0,0,.5);
+    -webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,.3), 0px 3px 5px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    -moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,.3), 0px 3px 5px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    box-shadow: inset 0px 1px 0px rgba(255,255,255,.3), 0px 1px 0px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    color: white;
+    margin-left: 20px;
+}
+
+.register-link {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.register-link a {
+    color: #af6918;
+}
+
+.register-link a:hover {
+    color: #854905;
+    text-decoration-line: underline;
+}
+
+.register-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/open-notebook-cut.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    z-index:-1;   
+}
+
+.left-col {
+    width: 35%;
+    float: left;
+    padding: 0%;
+    margin-left: 13%;
+    margin-top: 7%;
+    /* background-color: #3c763d; */
+}
+
+.register-header {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 140%;
+    /* margin-bottom: 5%; */
+
+}
+
+.register-content{
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: bold;
+    margin-top: 3%;
+    /* font-size: 140%; */
+}
+
+.register-content .form-control::-webkit-input-placeholder { opacity: 0.5 !important; font-weight: bold;}
+.register-content .form-control:-moz-placeholder { opacity: 0.5 !important; font-weight: bold;}
+.register-content .form-control::-moz-placeholder { opacity: 0.5 !important; font-weight: bold;}
+.register-content .form-control:-ms-input-placeholder { opacity: 0.5 !important; font-weight: bold;}
+.register-content .form-control::-ms-input-placeholder { opacity: 0.5 !important; font-weight: bold;}
+
+.register-form input {
+    margin-left: 40px;
+    font-size: 100%;
+}
+
+.register-form input.form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+}
+
+.register-form input.btn {
+    margin-left: 150px;
+}
+
+.right-col{
+    width: 35%;
+    float: right;
+    padding: 0%;
+    margin-top: 11%;
+    margin-right: 10%;
+    /* background-color: aqua; */
+}
+
+.login-link {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.login-link a {
+    color: #af6918;
+    margin-top: 10%;
+}
+
+.login-link a:hover {
+    color: #854905;
+    text-decoration-line: underline;
+}
+
+ul.errors {
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 10%;
+    margin-left: 10%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: red;
+    font-weight: bold;
+    border-color: white;
+    list-style: none;
+    width: fit-content;
+}
+
+.alert-custom {
+    margin-top: 10px;
+}
+
+.login-error {
+    text-align: center;
+    width: 30%;
+    margin: auto;
 }
 
 ul.success li {
@@ -59,12 +242,15 @@ ul.success li {
 }
 
 ul.error li {
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 10px;
     border: 1px solid transparent;
     border-radius: 4px;
-    color: #a94442;
-    background-color: #f2dede;
-    border-color: #ebccd1;
+    color: red;
+    font-weight: bold;
+    border-color: white;
     list-style: none;
+    width: fit-content;
 }
+
+
+

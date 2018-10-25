@@ -2,20 +2,24 @@ extend layout
 
 block content
 	.header-container
-		h1.header MY LIBRARY
+		h1.login-header MY LIBRARY
 		h2.welcome Welcome to My Library
 	.header-image
 
-	.general-content
-		p.about My Library gives you the ability to have all of your library, whether they are paper or virtual, in one place and keep track on books you've loaned and to know where they are.
-		br
-		h3 Pleaes login
-
-		form(method='post', action='/users/login')
-			.form-group
-				label Username
-				input.form-control(name='username', type='text', place-holder='Enter Username')
-			.form-group
-				label Password
-				input.form-control(name='password', type='password', place-holder='Enter Password')
-			input.btn.btn-primary(type='submit', name='submit', value='login')
+	.login-content
+		.container
+			p.about My Library gives you the ability to have all of your books, whether they are paper or virtual, in one place and keep track on books you've loaned and to know where they are.
+			.login-error
+				!= messages()
+			.login-form-container
+				.login-form
+					form.login-form.form-inline(method='post', action='/users/login')
+						.form-group.mb-2
+							input.form-control(name='username', type='text', placeholder='Username')
+						.form-group.mb-2.mx-sm-3
+							input.form-control(name='password', type='password', placeholder='Password')
+						input.mb-2.btn.btn-custom(type='submit', name='submit', value='login')
+			
+			p.register-link or 
+				a(href='/users/register') register
+			br

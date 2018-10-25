@@ -1,30 +1,47 @@
 extend layout
 
 block content
-	h2.page-header Register
-	p Pleaes register using the form below
+	.register-container
+		.container.register-content
+			.left-col
+				.register-header
+					h2.register-header Register
+					h4 Create a MyLibrary account
+					br
+				form.register-form(method='post', action='/users/register', enctype='multipart/form-data')
+					.form-group.row
+						label.col-sm-2.col-form-label Name
+						.col-sm-9
+							input.form-control(name='name', type='text', placeholder='Enter name')
+					.form-group.row
+						label.col-sm-2.col-form-label Email
+						.col-sm-9
+							input.form-control(name='email', type='email', placeholder='Enter Email')
+					.form-group.row
+						label.col-sm-2.col-form-label Username
+						.col-sm-9
+							input.form-control(name='username', type='text', placeholder='Enter Username')
+					.form-group.row
+						label.col-sm-2.col-form-label Password
+						.col-sm-9
+							input.form-control(name='Password', type='Password', placeholder='Enter Password')
+					.form-group.row
+						label.col-sm-2.col-form-label Confirm Password
+						.col-sm-9
+							input.form-control(name='conPassword', type='password', placeholder='Confirm Password')
+					//- .form-group
+					//- 	label Profile Image
+					//- 	input.form-control(name='profileImage', type='file')
+					input.btn.btn-custom(type='submit', name='submit', value='register')
+			.right-col
+				h4.login-link Already have an account?
+				h4.login-link
+					a(href='/users/login') login
+				if errors
+					ul.errors
+						each error, i in errors
+							li.alert-custom #{error.msg}
 
-	ul.errors
-		if errors
-			each error, i in errors
-				li.alert.alert-danger #{error.msg}
-	form(method='post', action='/users/register', enctype='multipart/form-data')
-		.form-group
-			label Name
-			input.form-control(name='name', type='text', place-holder='Enter name')
-		.form-group
-			label Email
-			input.form-control(name='email', type='email', place-holder='Enter Email')
-		.form-group
-			label Username
-			input.form-control(name='username', type='text', place-holder='Enter Username')
-		.form-group
-			label Password
-			input.form-control(name='password', type='password', place-holder='Enter Password')
-		.form-group
-			label Confirm Password
-			input.form-control(name='conPassword', type='password', place-holder='Confirm Password')
-		.form-group
-			label Profile Image
-			input.form-control(name='profileImage', type='file')
-		input.btn.btn-primary(type='submit', name='submit', value='register')
+
+
+					
