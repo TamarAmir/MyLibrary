@@ -1,0 +1,15 @@
+extends index
+
+block tabs
+
+    p Remove books from my library:					
+        form.book-form(method='post',action='/removeBook', enctype='application/x-www-form-urlencoded')
+            .form-group.row
+                label.col-sm-3.col-form-label Book Title
+                input.col-sm-8.form-control(name='bookName', type='text', placeholder='Enter book title')
+            .form-group.row
+                label.col-sm-3.col-form-label Author
+                input.col-sm-8.form-control(name='author', type='text', placeholder='Enter author name')
+            .add-book-btn
+                input.btn.mb-3(type='submit', name='submit', value='Remove book')
+    //- input.btn.btn-custom(type='button', name='addRow', value='Add Row')

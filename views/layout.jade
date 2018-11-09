@@ -1,8 +1,9 @@
 doctype html
 html(lang='en')
 	head
-		title Welcome
+		title MyLibrary
 		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/user-style.css')
 		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
 	body
 		nav.navbar.navbar-expand-lg.navbar-light.navbar-custom
@@ -13,8 +14,11 @@ html(lang='en')
 			.collapse.navbar-collapse
 				ul.navbar-nav.mr-auto
 					if user
-						li.nav-item(class=(title == 'Members' ? 'active' : ''))
-							a.nav-link(href='/') Members
+						li.nav-item(class=(title == 'library' ? 'active' : ''))
+							a.nav-link(href='/') #{user.username}'s library
+								span.sr-only
+						li.nav-item(class=(title == 'loan' ? 'active' : ''))
+							a.nav-link(href='/loan') Loaned books
 								span.sr-only
 					if !user
 						li.nav-item(class=(title == 'Register' ? 'active' : ''))
@@ -25,9 +29,14 @@ html(lang='en')
 					if user
 						li.nav-item
 							a.nav-link(href='/users/logout') Logout
+		if window
+			each object, key in window
+				script.
+					window.!{key} = !{JSON.stringify(object)};
 		.general-container
 			//- != messages()
 			block content
 
 	script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
 	script(src='javascripts/bootstrap.js')
+	script(src='javascripts/test.js')

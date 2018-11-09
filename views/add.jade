@@ -1,0 +1,18 @@
+extends index
+
+block tabs
+
+    p Add books to my library:					
+        form.book-form(method='post',action='/addBook', enctype='application/x-www-form-urlencoded')
+            .form-group.row
+                label.col-sm-3.col-form-label Book Title
+                input.col-sm-8.form-control(name='bookName', type='text', placeholder='Enter book title')
+            .form-group.row
+                label.col-sm-3.col-form-label Author
+                input.col-sm-8.form-control(name='author', type='text', placeholder='Enter author name')
+            .form-group.row
+                label.col-sm-3.col-form-label Genre
+                input.col-sm-8.form-control(name='genre', type='text', placeholder='Enter book genre')
+            .add-book-btn
+                input.btn.mb-3(type='submit', name='submit', value='Add book')
+    //- input.btn.btn-custom(type='button', name='addRow', value='Add Row')

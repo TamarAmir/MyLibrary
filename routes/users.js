@@ -106,9 +106,6 @@ router.post('/register', upload.single('profileImage'), function(req, res, next)
 		res.location('/');
 		res.redirect('/');
 	}
-
-
-
 });
 
 router.get('/logout', function(req, res){

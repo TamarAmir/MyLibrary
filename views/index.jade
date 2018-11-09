@@ -1,5 +1,27 @@
 extends layout
 
 block content
-  h1 Members area
-  p Welcome to the Members area!
+	!= messages()
+	h1.user-header Welcome #{user.name}!
+	.my-library
+		h3 My Library
+		nav.navbar.navbar-expand-lg.navbar-light.navbar-custom
+			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+				span.navbar-toggler-icon
+			.collapse.navbar-collapse
+				ul.navbar-nav.mr-auto
+					li.nav-item(class=(title == 'add' ? 'active' : ''))
+						a.nav-link(href='/add') Add book
+							span.sr-only
+					li.nav-item(class=(title == 'remove' ? 'active' : ''))
+						a.nav-link(href='/remove') Remove book
+							span.sr-only
+		block tabs
+
+	.loaned-books
+		h3 my books:
+		ul
+			each book in user.books
+				li #{book.bookTitle}
+					span  -  
+					span #{book.author}

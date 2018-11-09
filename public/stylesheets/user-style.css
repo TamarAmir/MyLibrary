@@ -1,0 +1,25 @@
+.user-header {
+    text-align: center;
+    padding: 10px;
+}
+
+.my-library {
+    padding: 10px;
+    width: 40%;
+    float: left;
+    /* background-color: blueviolet; */
+}
+
+/* .book-form {
+
+    background-color: burlywood;
+} */
+
+.add-book-btn {
+    text-align: center;
+}
+
+.loaned-books {
+    width: 50%;
+    float: right;
+}

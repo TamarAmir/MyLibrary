@@ -20,6 +20,8 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+var Book = require('./models/book');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -68,6 +70,11 @@ app.use(function(req, res, next) {
 
 app.get('*', function(req, res,next){
 	res.locals.user = req.user || null;
+	next();
+})
+
+app.get('*', function(req, res,next){
+	res.locals.books = req.user || null;
 	next();
 })
 
